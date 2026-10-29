@@ -1,0 +1,1 @@
+# gmaj.github.io
