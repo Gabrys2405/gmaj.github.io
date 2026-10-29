@@ -1,26 +1,39 @@
-
-<!DOCTYPE html>
-<html lang="pl">
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Engineering Portfolio</title>
-    <style>
-        body {
-            background: #0d1117;
-            color: #e6edf3;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 100px 20px;
-        }
-        h1 { color: #58a6ff; }
-        p { color: #8b949e; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#090e18" />
+  <meta name="description" content="Gabriel Maj — Electronics & Simulation Engineer. Electronics, embedded systems and engineering tools." />
+  <title>Gabriel Maj | Electronics & Simulation Engineer</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
-    <h1>Gabriel Maj</h1>
-    <p>Electronics & Simulation Engineer</p>
-    <p>Electronics Design | Circuit Simulation | Embedded Systems</p>
-    <p>Portfolio under construction 🚀</p>
+  <div class="ambient ambient-a" aria-hidden="true"></div><div class="ambient ambient-b" aria-hidden="true"></div>
+  <header class="header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="logo" href="#home"><span class="logo-icon">G<span>.</span></span><span>MAJ<span class="accent">/</span>ENGINEERING</span></a>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+      <div class="nav-links" id="nav-links"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a><a class="nav-github" href="https://github.com/Gabrys2405" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
+    </nav>
+  </header>
+  <main>
+    <section class="hero container" id="home">
+      <div class="hero-copy"><div class="eyebrow"><span class="pulse"></span> ENGINEERING / SIMULATION / EMBEDDED</div><p class="hero-intro">Hello, I'm <span class="accent">Gabriel Maj.</span></p><h1>Engineering<br><span class="gradient-text">what's next.</span></h1><p class="hero-description">Electronics & Simulation Engineer focused on circuit analysis, embedded systems and practical engineering solutions.</p><div class="hero-actions"><a class="btn btn-primary" href="#projects">Explore projects <span>↗</span></a><a class="btn btn-secondary" href="#contact">Get in touch <span>→</span></a></div><div class="hero-meta"><span><i></i> ELECTRONICS</span><span><i></i> SIMULATION</span><span><i></i> EMBEDDED SYSTEMS</span></div></div>
+      <div class="hero-visual" aria-hidden="true"><div class="visual-top"><span>ENGINEERING // 001</span><span class="live-dot">● SYSTEM ONLINE</span></div><svg class="circuit" viewBox="0 0 500 420" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="trace" x1="0" x2="1"><stop stop-color="#236da8" stop-opacity=".1"/><stop offset="1" stop-color="#5bdcff" stop-opacity=".9"/></linearGradient></defs><g stroke="url(#trace)" stroke-width="2"><path d="M0 80H120L175 135H300L350 85H500"/><path d="M0 140H85L170 225H280L345 290H500"/><path d="M0 340H100L165 275H310L390 355H500"/><path d="M60 0V65L145 150V210"/><path d="M430 0V80L335 175V245"/><path d="M240 0V90L210 120V300L160 350V420"/><path d="M490 230H400L340 170H265"/><path d="M300 420V355L355 300V250"/></g><g fill="#67d6ff"><circle cx="120" cy="80" r="4"/><circle cx="300" cy="135" r="4"/><circle cx="170" cy="225" r="4"/><circle cx="345" cy="290" r="4"/><circle cx="165" cy="275" r="4"/><circle cx="335" cy="175" r="4"/><circle cx="210" cy="120" r="4"/><circle cx="340" cy="170" r="4"/><circle cx="355" cy="300" r="4"/></g><rect x="168" y="147" width="164" height="128" rx="12" fill="#101f33" stroke="#6bd4fa" stroke-width="2"/><rect x="184" y="163" width="132" height="96" rx="5" fill="#0c1829" stroke="#284d6e"/><g stroke="#61b9e9" stroke-width="3"><path d="M200 145v-15m22 15v-15m22 15v-15m22 15v-15m22 15v-15m22 15v-15M200 277v15m22-15v15m22-15v15m22-15v15m22-15v15m22-15v15M166 168h-16m16 20h-16m16 20h-16m16 20h-16m16 20h-16m184-80h16m-16 20h16m-16 20h16m-16 20h16m-16 20h16"/></g><text x="250" y="205" fill="#d5efff" font-size="13" font-family="monospace" text-anchor="middle">G.MAJ</text><text x="250" y="226" fill="#55c9ff" font-size="9" font-family="monospace" text-anchor="middle">ENGINEERING</text></svg><div class="visual-bottom"><span>PCB_TRACE_RENDER</span><span>REV 01 / 2026</span></div></div>
+    </section>
+    <section class="section container" id="about"><div class="section-heading"><span class="section-number">01 / ABOUT</span><h2>Built on <span class="gradient-text">curiosity.</span></h2></div><div class="about-grid"><p class="about-lead">I enjoy understanding how electronic systems behave — from the smallest component to the complete design.</p><div class="about-detail"><p>My interests span circuit simulation, worst-case analysis, microcontrollers and software tools that make engineering work more efficient.</p><p>This site is a growing collection of personal experiments, prototypes and technical explorations.</p><div class="note">✦ Project descriptions below are placeholders to customize with publicly shareable work.</div></div></div></section>
+    <section class="section section-shaded" id="skills"><div class="container"><div class="section-heading"><span class="section-number">02 / TOOLKIT</span><h2>Technical <span class="gradient-text">toolbox.</span></h2></div><div class="skills-grid"><article class="skill-card"><div class="skill-icon">⌁</div><h3>Circuit Simulation</h3><p>Analysis, verification and modeling of analog and power electronics.</p><div class="tags"><span>LTspice</span><span>PSpice</span><span>WCCA</span></div></article><article class="skill-card"><div class="skill-icon">▦</div><h3>Embedded Systems</h3><p>Microcontroller-based hardware, digital interfaces and control.</p><div class="tags"><span>STM32</span><span>C</span><span>GPIO / PWM</span></div></article><article class="skill-card"><div class="skill-icon">{ }</div><h3>Engineering Software</h3><p>Custom analysis scripts, numerical tools and visualizations.</p><div class="tags"><span>Python</span><span>NumPy</span><span>Matplotlib</span></div></article><article class="skill-card"><div class="skill-icon">◈</div><h3>Electronics Design</h3><p>Hardware prototyping, power circuits and component evaluation.</p><div class="tags"><span>PCB</span><span>Power</span><span>Measurements</span></div></article></div></div></section>
+    <section class="section container" id="projects"><div class="section-heading projects-heading"><div><span class="section-number">03 / SELECTED WORK</span><h2>Projects & <span class="gradient-text">experiments.</span></h2></div><span class="section-aside">A few areas I'm exploring ↘</span></div><div class="project-grid"><article class="project-card"><div class="project-art matrix-art"><div class="matrix-grid" id="matrix-grid" aria-hidden="true"></div><span class="art-label">EMBEDDED / DISPLAY</span></div><div class="project-body"><div class="project-type">01 / CONCEPT</div><h3>32×32 LED Matrix Controller</h3><p>Exploring pixel mapping, scanning and microcontroller-based LED display control.</p><div class="tags"><span>STM32</span><span>Embedded C</span><span>LED Matrix</span></div></div></article><article class="project-card"><div class="project-art waveform-art"><svg viewBox="0 0 440 190" preserveAspectRatio="none" aria-hidden="true"><g stroke="#244057" stroke-width="1"><path d="M0 38H440M0 76H440M0 114H440M0 152H440M44 0V190M88 0V190M132 0V190M176 0V190M220 0V190M264 0V190M308 0V190M352 0V190M396 0V190"/></g><path d="M0 130H48L62 46H148L166 130H240L257 46H340L355 130H440" stroke="#4ac9f5" stroke-width="3" fill="none"/><path d="M0 150C40 150 45 150 65 105S120 73 155 90S205 145 245 100S315 65 350 91S390 130 440 115" stroke="#8a8eff" stroke-width="2.5" fill="none"/></svg><span class="art-label">SIMULATION / ANALYSIS</span></div><div class="project-body"><div class="project-type">02 / EXPLORATION</div><h3>Circuit Simulation & WCCA</h3><p>Investigating electrical tolerances, operating corners and transient behavior.</p><div class="tags"><span>LTspice</span><span>WCCA</span><span>Power Electronics</span></div></div></article><article class="project-card"><div class="project-art code-art"><div class="code-window"><div class="code-dots"><b></b><b></b><b></b></div><pre><span class="purple">import</span> numpy <span class="purple">as</span> np
+<span class="purple">import</span> matplotlib.pyplot <span class="purple">as</span> plt
+
+<span class="muted"># Analyze. Visualize. Iterate.</span>
+x = np.linspace(<span class="blue">0</span>, <span class="blue">10</span>, <span class="blue">1000</span>)
+y = np.sin(x)
+plt.plot(x, y)</pre></div><span class="art-label">SOFTWARE / TOOLS</span></div><div class="project-body"><div class="project-type">03 / TOOLING</div><h3>Python Engineering Tools</h3><p>Scripts and visual interfaces for processing simulation results and engineering data.</p><div class="tags"><span>Python</span><span>Data Analysis</span><span>Visualization</span></div></div></article></div><p class="projects-disclaimer">These are illustrative project summaries, not published case studies. Replace them with your own approved descriptions, images and links.</p></section>
+    <section class="section contact-section" id="contact"><div class="container contact-inner"><span class="section-number">04 / CONTACT</span><h2>Let's build <span class="gradient-text">something.</span></h2><p>Interested in electronics, embedded systems or engineering tools? Connect with me on GitHub.</p><a class="btn btn-primary" href="https://github.com/Gabrys2405" target="_blank" rel="noopener noreferrer">Visit my GitHub ↗</a></div></section>
+  </main>
+  <footer class="footer"><div class="container footer-inner"><span>© <span id="year">2026</span> Gabriel Maj</span><span>DESIGNED FOR CURIOSITY · BUILT WITH HTML / CSS / JS</span><a href="#home">Back to top ↑</a></div></footer>
 </body>
 </html>
