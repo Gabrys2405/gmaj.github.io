@@ -1,29 +1,49 @@
-const menuButton = document.querySelector('.menu-toggle');
-const menu = document.querySelector('.nav-links');
-menuButton?.addEventListener('click', () => {
-  const open = menu.classList.toggle('open');
-  menuButton.setAttribute('aria-expanded', String(open));
-});
-menu?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
-  menu.classList.remove('open');
-  menuButton?.setAttribute('aria-expanded', 'false');
-}));
-const year = document.querySelector('#year');
-if (year) year.textContent = new Date().getFullYear();
-const matrix = document.querySelector('#matrix-grid');
-if (matrix) {
-  const active = new Set();
-  for (let y = 0; y < 16; y++) for (let x = 0; x < 16; x++) {
-    const circle = (x-7.5)**2 + (y-7.5)**2;
-    const ring = circle > 23 && circle < 48;
-    const chip = (x >= 6 && x <= 9 && y >= 6 && y <= 9);
-    if (ring || chip) active.add(y * 16 + x);
+(() => {
+  const nav = document.getElementById('site-navigation');
+  const toggle = document.querySelector('.menu-toggle');
+  const closeMenu = () => {
+    if (!nav || !toggle) return;
+    nav.classList.remove('is-open');
+    toggle.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'Open menu');
+  };
+
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      const open = !nav.classList.contains('is-open');
+      nav.classList.toggle('is-open', open);
+      toggle.classList.toggle('is-open', open);
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    });
+    nav.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') closeMenu();
+    });
+    document.addEventListener('click', (event) => {
+      if (!nav.contains(event.target) && !toggle.contains(event.target)) closeMenu();
+    });
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 760) closeMenu();
+    });
   }
-  const fragment = document.createDocumentFragment();
-  for (let i = 0; i < 256; i++) {
-    const led = document.createElement('i');
-    if (active.has(i)) led.className = 'on';
-    fragment.appendChild(led);
+
+  const year = document.getElementById('year');
+  if (year) year.textContent = String(new Date().getFullYear());
+
+  const reveals = document.querySelectorAll('.reveal');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if ('IntersectionObserver' in window && !reducedMotion && reveals.length) {
+    document.documentElement.classList.add('js-enhanced');
+    const observer = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      }
+    }, { rootMargin: '0px 0px -30px 0px', threshold: 0.07 });
+    reveals.forEach((item) => observer.observe(item));
   }
-  matrix.appendChild(fragment);
-}
+})();
