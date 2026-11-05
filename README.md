@@ -11,6 +11,7 @@ Otwórz `index.html` w przeglądarce. W prawym górnym rogu znajdziesz przełąc
 - Strony poszczególnych projektów znajdują się w folderach `projects/` i `pl/projects/`.
 - Grafiki, CSS, JS i CV są współdzielone przez obie wersje.
 - CV do pobrania to niezmieniony oryginał w języku angielskim (`assets/Gabriel_Maj_CV(1).pdf`).
+- Wejdź w link: https://gabrys2405.github.io/gmaj.github.io/projects.html
 
 ## Publikacja na GitHub Pages
 
