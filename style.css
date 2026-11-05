@@ -7,7 +7,7 @@ a{color:inherit;text-decoration:none}img{display:block;max-width:100%}button{fon
 .container{width:min(var(--wide),calc(100% - 96px));margin-inline:auto}
 .skip-link{position:absolute;z-index:110;top:-100px;left:20px;padding:13px 20px;background:var(--ink);color:white}.skip-link:focus{top:10px}
 .eyebrow{font-size:11px;font-weight:750;letter-spacing:.18em;line-height:1.5;color:#52676d;text-transform:uppercase}.eyebrow-line{width:22px;height:1px;background:currentColor;display:inline-block;vertical-align:middle;margin-right:9px}
-.text-muted{color:#8b989b}.serif-accent{font-family:Georgia,"Times New Roman",serif;letter-spacing:-.055em;font-weight:400;font-style:italic}.text-link{display:inline-flex;gap:30px;align-items:center;border-bottom:1px solid var(--ink);font-size:14px;font-weight:650;padding:8px 0;transition:gap .2s,color .2s}.text-link:hover{gap:40px;color:var(--blue)}
+.text-muted{color:#8b989b}.text-link{display:inline-flex;gap:30px;align-items:center;border-bottom:1px solid var(--ink);font-size:14px;font-weight:650;padding:8px 0;transition:gap .2s,color .2s}.text-link:hover{gap:40px;color:var(--blue)}
 .button{display:inline-flex;justify-content:space-between;align-items:center;gap:30px;min-height:50px;padding:0 21px;font-size:13px;font-weight:650;transition:transform .2s,background .2s,color .2s}.button:hover{transform:translateY(-2px)}.button-dark{background:var(--ink);color:white;border:1px solid var(--ink)}.button-dark:hover{background:#344954}
 /* Navigation */
 .site-header{position:sticky;top:0;z-index:50;background:rgba(251,251,248,.96);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid rgba(24,35,42,.10)}
@@ -103,3 +103,98 @@ a{color:inherit;text-decoration:none}img{display:block;max-width:100%}button{fon
 .site-footer { background: var(--bg); color: var(--ink); padding-top: 0; }
 .footer-bottom { border-top: 1px solid var(--line); color: var(--muted); }
 .footer-links a:hover { color: var(--ink); }
+
+
+/* Contact — pared-back contact details */
+.contact-simple{min-height:calc(100vh - 175px);padding-top:clamp(70px,9vw,130px);padding-bottom:clamp(110px,13vw,180px)}
+.contact-intro{margin-bottom:clamp(52px,7vw,90px)}
+.contact-intro h1{margin:0;font-size:clamp(58px,8vw,106px);font-weight:580;line-height:1.07;letter-spacing:-.065em}
+
+.contact-methods{max-width:920px;border-top:1px solid var(--line)}
+.contact-method{display:grid;grid-template-columns:150px minmax(0,1fr) 24px;gap:24px;align-items:center;min-height:112px;border-bottom:1px solid var(--line);transition:color .2s}
+.contact-method:hover{color:var(--blue)}
+.contact-method-label{font-size:13px;font-weight:650;color:#6a777e}
+.contact-method-value{font-size:clamp(20px,2.5vw,30px);line-height:1.3;letter-spacing:-.035em;font-weight:540;overflow-wrap:anywhere}
+.contact-method-arrow{font-size:21px;font-weight:450;text-align:right;transition:transform .2s}
+.contact-method:hover .contact-method-arrow{transform:translate(3px,-3px)}
+@media(max-width:760px){
+  .contact-simple{min-height:calc(100vh - 145px);padding-top:70px;padding-bottom:100px}
+  .contact-intro{margin-bottom:56px}
+  .contact-method{grid-template-columns:minmax(0,1fr) 24px;gap:7px 14px;min-height:106px;padding:18px 0}
+  .contact-method-label{grid-column:1;grid-row:1}
+  .contact-method-value{grid-column:1;grid-row:2;font-size:clamp(19px,5vw,27px)}
+  .contact-method-arrow{grid-column:2;grid-row:1/3;align-self:center}
+}
+
+/* Contact cards layout */
+.contact-cards-section{padding-block:72px 120px}
+.contact-cards-section .contact-intro{margin-bottom:36px}
+.contact-cards-section h1{font-size:clamp(54px,8vw,98px);font-weight:600;letter-spacing:-.065em;line-height:1.03;margin:0}
+
+.contact-cards-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;align-items:stretch}
+.contact-card{display:flex;flex-direction:column;align-items:flex-start;min-height:270px;padding:30px 30px 34px;background:linear-gradient(180deg,#f5f6f4 0%,#f1f2ef 100%);border:1px solid #dde2e1;border-radius:24px;box-shadow:0 14px 34px rgba(23,32,37,.05);transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
+.contact-card:hover{transform:translateY(-4px);box-shadow:0 18px 38px rgba(23,32,37,.08);border-color:#cfd8d6}
+.contact-card-icon{display:grid;place-items:center;width:66px;height:66px;border-radius:18px;border:1px solid #d8dddc;background:#fbfbf8;color:#253139;margin-bottom:34px;flex:0 0 auto}
+.contact-card-icon svg{width:28px;height:28px;display:block}
+.contact-card-label{font-size:13px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#7b878c;margin-bottom:14px}
+.contact-card-value{font-size:clamp(21px,1.9vw,29px);line-height:1.35;letter-spacing:-.03em;font-weight:600;color:var(--ink);overflow-wrap:anywhere;max-width:100%}
+@media(max-width:1050px){.contact-cards-grid{grid-template-columns:1fr;gap:22px}.contact-card{min-height:220px}.contact-card-value{font-size:24px}}
+@media(max-width:760px){.contact-cards-section{padding-block:56px 86px}.contact-cards-section .contact-intro{margin-bottom:28px}.contact-card{min-height:190px;padding:24px 22px 28px;border-radius:20px}.contact-card-icon{width:58px;height:58px;margin-bottom:24px}.contact-card-value{font-size:21px}}
+
+/* Unified typography: all headings use the same clean sans-serif as “My”. */
+h1,h2,h3,h4,h5,h6{font-family:inherit;font-style:normal}
+
+
+/* Resume refinements: company name marks and compact training list */
+.employer-line{display:flex;align-items:center;gap:15px;margin:11px 0 14px;min-height:44px}
+.employer-mark{width:112px;min-width:112px;height:42px;display:grid;place-items:center;padding:5px 9px;border:1px solid var(--line);border-radius:7px;background:#fff}
+.employer-mark img{display:block;width:100%;height:100%;object-fit:contain}
+.employer-line .timeline-company{margin:0;line-height:1.6}
+.training-list{margin-left:31%;border-top:1px solid var(--line)}
+.training-item{display:grid;grid-template-columns:55px 1fr;gap:22px;padding:24px 0;border-bottom:1px solid var(--line)}
+.training-item:last-child{border-bottom:0}
+.training-marker{padding-top:5px;font-size:11px;color:var(--blue);font-weight:700}
+.training-item h3{font-size:20px;font-weight:630;letter-spacing:-.03em;margin:0 0 6px}
+.training-item p{font-size:13px;color:var(--muted);margin:0}
+@media(max-width:760px){
+  .training-list{margin-left:0}
+  .training-item{gap:12px;padding:22px 0}
+  .employer-line{gap:12px;align-items:start;flex-direction:column}
+  .employer-mark{width:105px;min-width:105px;height:39px}
+}
+
+/* Real employer logos provided by the user */
+.employer-line{display:flex;align-items:center;gap:16px;margin:11px 0 14px;min-height:52px}
+.employer-mark{width:108px;min-width:108px;height:52px;display:grid;place-items:center;padding:0;border:0;border-radius:0;background:transparent;overflow:hidden}
+.employer-mark img{display:block;width:100%;height:100%;object-fit:contain}
+@media(max-width:760px){
+  .employer-line{gap:12px;align-items:flex-start;flex-direction:column}
+  .employer-mark{width:108px;min-width:108px;height:52px}
+}
+
+/* Employer logos: preserve the full original, square 200×200 images. */
+.timeline .employer-line { display: flex; align-items: center; gap: 20px; min-height: 102px; }
+.timeline .employer-line .employer-mark {
+  flex: 0 0 104px;
+  display: block;
+  width: 104px;
+  height: 104px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  border-radius: 0;
+  overflow: visible;
+}
+.timeline .employer-line .employer-mark img {
+  display: block;
+  width: 104px;
+  height: 104px;
+  max-width: none;
+  object-fit: contain;
+  object-position: center;
+}
+@media (max-width:760px) {
+  .timeline .employer-line { align-items:flex-start; flex-direction:row; gap: 16px; }
+  .timeline .employer-line .employer-mark { width:88px; height:88px; flex-basis:88px; }
+  .timeline .employer-line .employer-mark img { width:88px; height:88px; }
+}
