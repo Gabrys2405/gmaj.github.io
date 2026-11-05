@@ -1,24 +1,19 @@
-# Gabriel Maj — Engineering Portfolio
+# Gabriel Maj — portfolio (PL / EN)
 
-Static, responsive portfolio built with HTML, CSS and vanilla JavaScript.
+Statyczna strona w HTML, CSS i JavaScript. Działa bez frameworków oraz bez procesu budowania.
 
-## Deploy to GitHub Pages
+## Jak uruchomić
 
-1. Open your public repository `Gabrys2405/gmaj.github.io`.
-2. Upload `index.html`, `style.css`, `script.js` to the **root** of the `main` branch (alongside your existing `README.md` and `_config.yml`). You may replace the current `index.html`.
-3. Commit the changes.
-4. Under **Settings → Pages**, select **Deploy from a branch**, `main`, `/(root)`.
-5. Wait for the Pages deployment under **Actions** to succeed.
-6. Visit https://gabrys2405.github.io/gmaj.github.io/ and refresh (Ctrl+F5 if needed).
+Otwórz `index.html` w przeglądarce. W prawym górnym rogu znajdziesz przełącznik `EN / PL`.
 
-All asset paths are relative, so the site works under `/gmaj.github.io/` and locally by opening `index.html`.
+- Wersja angielska: główne pliki HTML w katalogu projektu.
+- Wersja polska: odpowiadające im pliki w folderze `pl/`.
+- Strony poszczególnych projektów znajdują się w folderach `projects/` i `pl/projects/`.
+- Grafiki, CSS, JS i CV są współdzielone przez obie wersje.
+- CV do pobrania to niezmieniony oryginał w języku angielskim (`assets/Gabriel_Maj_CV(1).pdf`).
 
-## Customize
+## Publikacja na GitHub Pages
 
-- `index.html`: edit biography, skills, projects, and contact links.
-- `style.css`: edit colors, layout, and typography.
-- `script.js`: mobile navigation and LED matrix decoration.
-- The projects are **illustrative placeholders**, not documented completed case studies. Replace them with your own publicly shareable work.
-- Do not publish confidential employer schematics, simulations, measurements, or client information.
+Wgraj zawartość katalogu `gabriel-maj-portfolio` (nie sam nadrzędny folder) do głównego katalogu repozytorium GitHub Pages, w którym jest obecnie `index.html`. Zachowaj foldery `pl`, `projects` i `assets`.
 
-No build tools, packages, accounts, or external CDNs required.
+Domyślną wersją strony jest angielska. Przełącznik przenosi do tej samej podstrony w drugim języku.

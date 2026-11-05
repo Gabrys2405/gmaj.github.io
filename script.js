@@ -6,7 +6,7 @@
     nav.classList.remove('is-open');
     toggle.classList.remove('is-open');
     toggle.setAttribute('aria-expanded', 'false');
-    toggle.setAttribute('aria-label', 'Open menu');
+    toggle.setAttribute('aria-label', document.documentElement.lang === 'pl' ? 'Otwórz menu' : 'Open menu');
   };
 
   if (toggle && nav) {
@@ -15,7 +15,7 @@
       nav.classList.toggle('is-open', open);
       toggle.classList.toggle('is-open', open);
       toggle.setAttribute('aria-expanded', String(open));
-      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      toggle.setAttribute('aria-label', document.documentElement.lang === 'pl' ? (open ? 'Zamknij menu' : 'Otwórz menu') : (open ? 'Close menu' : 'Open menu'));
     });
     nav.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
     document.addEventListener('keydown', (event) => {

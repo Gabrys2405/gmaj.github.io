@@ -198,3 +198,19 @@ h1,h2,h3,h4,h5,h6{font-family:inherit;font-style:normal}
   .timeline .employer-line .employer-mark { width:88px; height:88px; flex-basis:88px; }
   .timeline .employer-line .employer-mark img { width:88px; height:88px; }
 }
+
+
+/* Language switcher — compact and consistent across every page */
+.header-inner{gap:clamp(22px,3vw,48px)}
+.language-switch{display:inline-flex;align-items:center;gap:3px;flex-shrink:0;border:1px solid var(--line);border-radius:999px;padding:4px;background:var(--bg)}
+.language-switch a{display:inline-flex;align-items:center;justify-content:center;min-width:34px;min-height:30px;padding:4px 8px;border-radius:999px;color:#67747a;font-size:12px;font-weight:700;letter-spacing:.03em;line-height:1;text-decoration:none;transition:color .15s,background .15s}
+.language-switch a:hover{color:var(--ink)}
+.language-switch a.is-current{background:var(--ink);color:#fff}
+.language-switch a:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+@media(max-width:760px){
+ .header-inner{justify-content:space-between;gap:12px}
+ .language-switch a{min-width:39px;min-height:34px;font-size:13px}
+ .menu-toggle{order:0}
+ .language-switch{order:1;margin-left:auto}
+ .nav{order:2}
+}
