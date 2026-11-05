@@ -214,3 +214,34 @@ h1,h2,h3,h4,h5,h6{font-family:inherit;font-style:normal}
  .language-switch{order:1;margin-left:auto}
  .nav{order:2}
 }
+
+/* Interactive KiCad GLB model on the Waveform Generator detail pages */
+.pcb-viewer-section{padding-top:84px;padding-bottom:94px}
+.pcb-viewer-frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#f1f1f3}
+.pcb-model-viewer{display:block;width:100%;height:clamp(350px,55vw,640px);background:#e8e8ed;--poster-color:#e8e8ed;--progress-bar-color:#52737b;--progress-bar-height:4px}
+.pcb-poster{position:absolute;inset:0;display:grid;place-items:center;isolation:isolate;overflow:hidden;background:#e9e8f1}
+.pcb-poster img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:-1}
+.pcb-load-button{display:inline-flex;align-items:center;justify-content:space-between;gap:34px;cursor:pointer;background:var(--ink);color:white;border:1px solid var(--ink);padding:15px 20px;min-height:52px;font:650 15px/1.2 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;box-shadow:0 6px 25px #18232a24;transition:transform .18s,background .18s}
+.pcb-load-button:hover{transform:translateY(-2px);background:#344954}
+.pcb-load-button:disabled{cursor:progress;opacity:.75}
+.pcb-viewer-toolbar{display:flex;gap:20px;justify-content:space-between;align-items:center;background:var(--bg);padding:17px 22px;border-top:1px solid var(--line)}
+.pcb-usage-hint{color:var(--muted);font-size:12px;line-height:1.6}
+.pcb-viewer-buttons{display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end}
+.pcb-viewer-action{border:1px solid #c7cfd0;background:var(--bg);color:var(--ink);padding:10px 15px;font-size:12px;font-weight:650;cursor:pointer;white-space:nowrap;transition:background .2s}
+.pcb-viewer-action:hover{background:#e9eeed}
+.pcb-viewer-status{padding:0 22px 18px;margin:0;background:var(--bg);font-size:11px;color:var(--muted)}
+.pcb-viewer-frame:fullscreen{display:flex;flex-direction:column;width:100%;height:100%;background:var(--bg)}
+.pcb-viewer-frame:fullscreen .pcb-model-viewer{height:auto;flex:1;min-height:0}
+@media(max-width:760px){.pcb-viewer-section{padding-top:54px;padding-bottom:65px}.pcb-model-viewer{height:clamp(300px,85vw,500px)}.pcb-viewer-toolbar{align-items:flex-start;flex-direction:column;padding:14px 16px}.pcb-viewer-buttons{justify-content:flex-start}.pcb-viewer-status{padding:0 16px 16px}}
+@media(prefers-reduced-motion:reduce){.pcb-load-button{transition:none}}
+
+/* 3D model viewer: actual model loads only after click; fallback stays available on errors */
+.pcb-model-stage{position:relative;height:clamp(350px,55vw,640px);background:#e8e8ed}
+.pcb-model-stage .pcb-model-viewer{width:100%;height:100%}
+.pcb-model-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;isolation:isolate;background:#e9e8f1;z-index:2}
+.pcb-model-overlay[hidden]{display:none}
+.pcb-model-overlay>img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:-1}
+.pcb-model-overlay.is-loading::after{content:"";position:absolute;inset:0;background:rgba(255,255,255,.1);pointer-events:none}
+.pcb-model-overlay.is-loading .pcb-load-button{opacity:.8}
+.pcb-viewer-frame:fullscreen .pcb-model-stage{flex:1;min-height:0;height:auto}
+@media(max-width:760px){.pcb-model-stage{height:clamp(300px,85vw,500px)}}
