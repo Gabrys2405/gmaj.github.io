@@ -245,3 +245,9 @@ h1,h2,h3,h4,h5,h6{font-family:inherit;font-style:normal}
 .pcb-model-overlay.is-loading .pcb-load-button{opacity:.8}
 .pcb-viewer-frame:fullscreen .pcb-model-stage{flex:1;min-height:0;height:auto}
 @media(max-width:760px){.pcb-model-stage{height:clamp(300px,85vw,500px)}}
+
+/* Simpler 3D viewer: auto-load, no overlay, no fullscreen */
+.pcb-viewer-buttons{justify-content:flex-end}
+.pcb-viewer-buttons .pcb-viewer-action{min-width:120px}
+.pcb-viewer-frame.pcb-viewer-error::after{content:"3D preview could not be loaded in this browser.";display:block;padding:0 22px 18px;background:var(--bg);font-size:11px;color:#8b5454}
+html[lang="pl"] .pcb-viewer-frame.pcb-viewer-error::after{content:"Podgląd 3D nie mógł zostać wczytany w tej przeglądarce."}

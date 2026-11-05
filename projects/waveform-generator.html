@@ -37,20 +37,14 @@
   </div>
   <div class="pcb-viewer-frame" data-pcb-model>
     <div class="pcb-model-stage">
-      <model-viewer id="generator-3d" class="pcb-model-viewer" data-model-src="../assets/models/pcb-generator.glb" alt="Interactive 3D model of the waveform generator PCB" loading="eager" reveal="auto" camera-controls touch-action="pan-y" interaction-prompt="none" shadow-intensity="0.25" environment-image="neutral" camera-orbit="35deg 68deg auto"></model-viewer>
-      <div class="pcb-model-overlay" data-model-overlay>
-        <img src="../assets/images/generator-top.webp" alt="" loading="lazy">
-        <button class="pcb-load-button" type="button" data-load-model data-try-label="Try again" data-start-label="Load 3D model">Load 3D model <span aria-hidden="true">↗</span></button>
-      </div>
+      <model-viewer id="generator-3d" class="pcb-model-viewer" src="../assets/models/pcb-generator.glb" alt="Interactive 3D model of the waveform generator PCB" loading="eager" reveal="auto" camera-controls touch-action="pan-y" interaction-prompt="none" shadow-intensity="0.25" environment-image="neutral" camera-orbit="35deg 68deg auto"></model-viewer>
     </div>
     <div class="pcb-viewer-toolbar">
       <span class="pcb-usage-hint">Drag to rotate · scroll to zoom · right-click to pan</span>
       <div class="pcb-viewer-buttons">
         <button type="button" class="pcb-viewer-action" data-reset-model>Reset view</button>
-        <button type="button" class="pcb-viewer-action" data-fullscreen-model>Fullscreen <span aria-hidden="true">⛶</span></button>
       </div>
     </div>
-    <p class="pcb-viewer-status" role="status" aria-live="polite" data-model-status data-initial="The model loads only when you click (5.4 MB)." data-loading="Loading 3D model…" data-error="The model could not be loaded. Use a local HTTP server or GitHub Pages and check your internet connection." data-timeout="Loading is taking too long. Retry — if it persists, check your connection or try another browser.">The model loads only when you click (5.4 MB).</p>
   </div>
 </section>
 <section class="section container detail-gallery"><div class="section-intro compact"><p class="eyebrow">03 / GALLERY</p><div><h2>Inside the design</h2><p>Selected 3D PCB views and photographs of the hardware.</p></div></div><div class="gallery-grid"><figure class="gallery-image gallery-wide"><img alt="Waveform generator PCB 3D top-side rendering" loading="lazy" src="../assets/images/generator-top.webp"/><figcaption>PCB render / component side</figcaption></figure><figure class="gallery-image"><img alt="Waveform generator PCB bottom-side rendering" loading="lazy" src="../assets/images/generator-bottom.webp"/><figcaption>PCB render / reverse side</figcaption></figure><figure class="gallery-image"><img alt="Photograph of the assembled waveform generator PCB front side" loading="lazy" src="../assets/images/generator-photo-front.webp"/><figcaption>Assembled board / front</figcaption></figure><figure class="gallery-image"><img alt="Photograph of the assembled waveform generator PCB rear side" loading="lazy" src="../assets/images/generator-photo-back.webp"/><figcaption>Assembled board / back</figcaption></figure></div></section>
