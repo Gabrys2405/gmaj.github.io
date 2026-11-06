@@ -9,12 +9,14 @@
 <meta content="website" property="og:type"/>
 <meta content="Zasilanie drona | Gabriel Maj" property="og:title"/>
 <meta content="A power distribution board with independent primary and backup supply paths for a drone." property="og:description"/>
-<meta content="../../assets/images/generator-top.webp" property="og:image"/>
+<meta content="../../assets/images/drone-top.webp" property="og:image"/>
 <title>Zasilanie drona | Gabriel Maj</title>
 <link href="../../assets/favicon.svg" rel="icon" type="image/svg+xml"/>
 <link href="../../style.css" rel="stylesheet"/>
 <script defer="" src="../../script.js"></script>
-<link href="../../projects/drone-power-board.html" hreflang="en" rel="alternate"/><link href="drone-power-board.html" hreflang="pl" rel="alternate"/></head>
+<link href="../../projects/drone-power-board.html" hreflang="en" rel="alternate"/><link href="drone-power-board.html" hreflang="pl" rel="alternate"/><script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.4.0/model-viewer.min.js"></script>
+<script defer src="../../assets/pcb-viewer.js"></script>
+</head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header" id="site-header">
@@ -28,7 +30,24 @@
 <main id="main">
 <section class="detail-hero container"><a class="back-link" href="../projects.html"><span aria-hidden="true">←</span> Wróć do projektów</a><p class="eyebrow">PROJEKT 03 / ELEKTRONIKA MOCY</p><div class="detail-heading"><h1>Drone Power Board</h1><p>Płytka dystrybucji zasilania drona z niezależnym torem głównym i rezerwowym.</p></div><div class="detail-hero-image"><img alt="KiCad three-dimensional rendering of drone power board with large yellow connectors" fetchpriority="high" src="../../assets/images/drone-top.webp"/></div><div class="detail-tags"><span>4-WARSTWOWA PCB</span><span>REDUNDANT POWER</span><span>SOFT-START</span><span>STM32</span></div></section>
 <section class="section section-lined container detail-body"><div class="split-heading"><p class="eyebrow">01 / OPIS</p><h2>Zasilanie z redundancją</h2></div><div class="detail-text-grid"><p>Czterowarstwowa płytka została zaprojektowana do obsługi podstawowej ścieżki zasilania i niezależnego toru rezerwowego. Układ łagodnego startu wstępnie ładuje pojemności wejściowe sterowników silników, ograniczając prąd rozruchowy.</p><div><h3>Najważniejsze elementy projektu</h3><ul class="keypoints"><li>Dwie niezależne ścieżki zasilania: główna i rezerwowa</li><li>Łagodny start poprzez wstępne ładowanie obciążeń sterowników silników</li><li>Ograniczenie prądu rozruchowego przy włączaniu</li><li>Mikrokontroler z rodziny STM32 do monitorowania napięć i zarządzania zasilaniem</li><li>Komunikacja z systemem sterowania dronem</li></ul></div></div></section>
-<section class="section container detail-gallery"><div class="section-intro compact"><p class="eyebrow">02 / GALERIA</p><div><h2>Szczegóły projektu</h2><p>Wybrane rendery 3D płytki PCB.</p></div></div><div class="gallery-grid"><figure class="gallery-image gallery-wide"><img alt="Drone power board upper surface 3D rendering" loading="lazy" src="../../assets/images/drone-top.webp"/><figcaption>Render PCB / strona elementów</figcaption></figure><figure class="gallery-image"><img alt="Drone power board lower surface 3D rendering" loading="lazy" src="../../assets/images/drone-bottom.webp"/><figcaption>Render PCB / druga strona</figcaption></figure></div></section>
+<section class="section container pcb-viewer-section" aria-labelledby="drone-viewer-heading">
+  <div class="section-intro compact">
+    <p class="eyebrow">02 / MODEL INTERAKTYWNY</p>
+    <div><h2 id="drone-viewer-heading">Obejrzyj płytkę w 3D</h2><p>Obracaj, przybliżaj i przesuwaj model, aby obejrzeć szczegóły projektu.</p></div>
+  </div>
+  <div class="pcb-viewer-frame" data-pcb-model>
+    <div class="pcb-model-stage">
+      <model-viewer id="drone-3d" class="pcb-model-viewer" src="../../assets/models/pcb-drone.glb" alt="Interaktywny model 3D płytki zasilania drona" loading="eager" reveal="auto" camera-controls touch-action="pan-y" interaction-prompt="none" shadow-intensity="0.25" environment-image="neutral" camera-orbit="35deg 68deg auto"></model-viewer>
+    </div>
+    <div class="pcb-viewer-toolbar">
+      <span class="pcb-usage-hint">Przeciągnij, aby obrócić · przewijaj, aby przybliżyć · prawy przycisk, aby przesunąć</span>
+      <div class="pcb-viewer-buttons">
+        <button type="button" class="pcb-viewer-action" data-reset-model>Resetuj widok</button>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section container detail-gallery"><div class="section-intro compact"><p class="eyebrow">03 / GALERIA</p><div><h2>Szczegóły projektu</h2><p>Wybrane rendery 3D płytki PCB.</p></div></div><div class="gallery-grid"><figure class="gallery-image gallery-wide"><img alt="Drone power board upper surface 3D rendering" loading="lazy" src="../../assets/images/drone-top.webp"/><figcaption>Render PCB / strona elementów</figcaption></figure><figure class="gallery-image"><img alt="Drone power board lower surface 3D rendering" loading="lazy" src="../../assets/images/drone-bottom.webp"/><figcaption>Render PCB / druga strona</figcaption></figure></div></section>
 <section class="section container detail-next"><div><span class="eyebrow">NASTĘPNY PROJEKT</span><a href="waveform-generator.html">Waveform Generator <span aria-hidden="true">↗</span></a></div><a class="text-link" href="../projects.html">Wszystkie projekty ↗</a></section>
 </main>
 <footer class="site-footer">
