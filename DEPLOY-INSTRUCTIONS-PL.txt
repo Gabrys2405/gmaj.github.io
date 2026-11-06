@@ -1,0 +1,12 @@
+AKTUALIZACJA STRONY – CONTACT Z TRZEMA KAFLAMI
+
+W folderze znajdują się wszystkie pliki portfolio (PL/EN, trzy modele 3D).
+
+1. Prześlij CAŁĄ zawartość folderu gabriel-maj-portfolio do katalogu publikacji witryny, zamieniając starsze pliki. Nie przesyłaj samego ZIP bez rozpakowania.
+2. W szczególności nadpisz pliki contact.html, pl/contact.html i style.css.
+3. Jeśli korzystasz z GitHub Pages: sprawdź Settings > Pages i gałąź oraz folder publikacji. Wgraj pliki w to miejsce.
+4. Otwórz https://gmajtech.com/contact.html oraz https://gmajtech.com/pl/contact.html i wymuś odświeżenie / użyj prywatnej karty.
+5. Jeśli nadal widać 'Let's connect', sprawdź źródło strony (View source): powinien być komentarz CONTACT VERSION: THREE CARDS. Jeśli komentarza nie ma, hosting podaje nadal stary HTML.
+
+Trzy kafelki: Phone / Email / LinkedIn (PL: Telefon / E-mail / LinkedIn).
+Pozostałe strony, logotypy, CV i modele 3D zachowano.
