@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="pl">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#fbfbf8" name="theme-color"/>
+<meta content="A compact four-layer PCB designed to interface with and control a microwave radar sensor." name="description"/>
+<meta content="website" property="og:type"/>
+<meta content="Płytka radarowa | Gabriel Maj" property="og:title"/>
+<meta content="A compact four-layer PCB designed to interface with and control a microwave radar sensor." property="og:description"/>
+<meta content="../../assets/images/radar-top.webp" property="og:image"/>
+<title>Płytka radarowa | Gabriel Maj</title>
+<link href="../../assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="../../style.css" rel="stylesheet"/>
+<script defer="" src="../../script.js"></script>
+<link href="../../projects/radar-board.html" hreflang="en" rel="alternate"/><link href="radar-board.html" hreflang="pl" rel="alternate"/><script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.4.0/model-viewer.min.js"></script>
+<script defer src="../../assets/pcb-viewer.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header" id="site-header">
+<div class="container header-inner">
+<button aria-controls="site-navigation" aria-expanded="false" aria-label="Otwórz menu" class="menu-toggle" type="button"><span></span><span></span><span></span></button>
+<nav aria-label="Nawigacja główna" class="nav" id="site-navigation">
+<a href="../index.html">Start</a><a href="../resume.html">CV</a><a aria-current="page" class="is-active" href="../projects.html">Projekty</a><a href="../lab.html">Laboratorium</a><a href="../contact.html">Kontakt</a>
+</nav>
+<div aria-label="Język strony" class="language-switch" role="group"><a aria-label="English" href="../../projects/radar-board.html" hreflang="en" lang="en">EN</a><a aria-current="page" aria-label="Polski" class="is-current" href="radar-board.html" hreflang="pl" lang="pl">PL</a></div></div>
+</header>
+<main id="main">
+<section class="detail-hero container"><a class="back-link" href="../projects.html"><span aria-hidden="true">←</span> Wróć do projektów</a><p class="eyebrow">PROJEKT 02 / AUTOMOTIVE / INTERFEJS CZUJNIKA</p><div class="detail-heading"><h1>Radar Board</h1><p>Kompaktowa czterowarstwowa płytka PCB do komunikacji z mikrofalowym sensorem radarowym i sterowania nim.</p></div><div class="detail-hero-image"><img alt="Widok 3D płytki interfejsu radarowego w KiCad" fetchpriority="high" src="../../assets/images/radar-top.webp"/></div><div class="detail-tags"><span>4-WARSTWOWA PCB</span><span>STM32F334R8T6</span><span>CAN</span><span>ZARZĄDZANIE ZASILANIEM</span></div></section>
+<section class="section section-lined container detail-body"><div class="split-heading"><p class="eyebrow">01 / OPIS</p><h2>Kompaktowy interfejs sensora</h2></div><div class="detail-text-grid"><p>Płytka jest oparta na mikrokontrolerze STM32F334R8T6 i została zaprojektowana do obsługi mikrofalowego sensora radarowego w obudowie BGA ze zintegrowanymi antenami. Projekt obejmuje układy zasilania i komunikacji oraz uwzględnia wymagania branży motoryzacyjnej.</p><div><h3>Najważniejsze elementy projektu</h3><ul class="keypoints"><li>Mikrokontroler STM32F334R8T6</li><li>Mikrofalowy sensor radarowy w obudowie BGA ze zintegrowanymi antenami</li><li>Przetwornica DC-DC i trzy stabilizatory LDO na płytce</li><li>Translator poziomów napięć oraz transceiver CAN</li><li>Czterowarstwowa konstrukcja PCB</li></ul></div></div></section>
+<section class="section container pcb-viewer-section" aria-labelledby="radar-viewer-heading">
+  <div class="section-intro compact">
+    <p class="eyebrow">02 / MODEL INTERAKTYWNY</p>
+    <div><h2 id="radar-viewer-heading">Obejrzyj płytkę w 3D</h2><p>Obracaj, przybliżaj i przesuwaj model, aby obejrzeć szczegóły projektu.</p></div>
+  </div>
+  <div class="pcb-viewer-frame" data-pcb-model>
+    <div class="pcb-model-stage">
+      <model-viewer id="radar-3d" class="pcb-model-viewer" src="../../assets/models/pcb-radar.glb" alt="Interaktywny model 3D płytki radarowej" loading="eager" reveal="auto" camera-controls touch-action="pan-y" interaction-prompt="none" shadow-intensity="0.25" environment-image="neutral" camera-orbit="35deg 68deg auto"></model-viewer>
+    </div>
+    <div class="pcb-viewer-toolbar">
+      <span class="pcb-usage-hint">Przeciągnij, aby obrócić · przewijaj, aby przybliżyć · prawy przycisk, aby przesunąć</span>
+      <div class="pcb-viewer-buttons">
+        <button type="button" class="pcb-viewer-action" data-reset-model>Resetuj widok</button>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section container detail-gallery"><div class="section-intro compact"><p class="eyebrow">03 / GALERIA</p><div><h2>Szczegóły projektu</h2><p>Wybrane rendery 3D płytki PCB i zdjęcia rzeczywistego układu.</p></div></div><div class="gallery-grid"><figure class="gallery-image gallery-wide"><img alt="Render 3D górnej strony płytki radarowej" loading="lazy" src="../../assets/images/radar-top.webp"/><figcaption>Render PCB / strona elementów</figcaption></figure><figure class="gallery-image"><img alt="Render 3D dolnej strony płytki radarowej" loading="lazy" src="../../assets/images/radar-bottom.webp"/><figcaption>Render PCB / druga strona</figcaption></figure><figure class="gallery-image"><img alt="Zdjęcie przedniej strony zmontowanej płytki radarowej" loading="lazy" src="../../assets/images/radar-photo-front.webp"/><figcaption>Zmontowana płytka / przód</figcaption></figure><figure class="gallery-image"><img alt="Zdjęcie tylnej strony zmontowanej płytki radarowej" loading="lazy" src="../../assets/images/radar-photo-back.webp"/><figcaption>Zmontowana płytka / tył</figcaption></figure></div></section>
+<section class="section container detail-next"><div><span class="eyebrow">NASTĘPNY PROJEKT</span><a href="drone-power-board.html">Drone Power Board <span aria-hidden="true">↗</span></a></div><a class="text-link" href="../projects.html">Wszystkie projekty ↗</a></section>
+</main>
+<footer class="site-footer">
+<div class="container">
+<div class="footer-bottom"><span>© <span id="year">2026</span> Gabriel Maj</span><div class="footer-links"><a href="https://www.linkedin.com/in/gabriel-maj-181662235/" rel="noopener noreferrer" target="_blank">LinkedIn ↗</a></div></div>
+</div>
+</footer>
+</body></html>

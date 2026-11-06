@@ -1,58 +1,38 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="#fbfbf8" name="theme-color"/>
-<meta content="A power distribution board with independent primary and backup supply paths for a drone." name="description"/>
-<meta content="website" property="og:type"/>
-<meta content="Drone Power Board | Gabriel Maj" property="og:title"/>
-<meta content="A power distribution board with independent primary and backup supply paths for a drone." property="og:description"/>
-<meta content="../assets/images/drone-top.webp" property="og:image"/>
-<title>Drone Power Board | Gabriel Maj</title>
-<link href="../assets/favicon.svg" rel="icon" type="image/svg+xml"/>
-<link href="../style.css" rel="stylesheet"/>
-<script defer="" src="../script.js"></script>
-<link href="drone-power-board.html" hreflang="en" rel="alternate"/><link href="../pl/projects/drone-power-board.html" hreflang="pl" rel="alternate"/><script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.4.0/model-viewer.min.js"></script>
-<script defer src="../assets/pcb-viewer.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fbfbf8">
+  <meta name="description" content="A power distribution board with independent primary and backup supply paths for a drone.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Drone Power Board | Gabriel Maj">
+  <meta property="og:description" content="A power distribution board with independent primary and backup supply paths for a drone.">
+  <meta property="og:image" content="../assets/images/generator-top.webp">
+  <title>Drone Power Board | Gabriel Maj</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="stylesheet" href="../style.css">
+  <script src="../script.js" defer></script>
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header" id="site-header">
-<div class="container header-inner">
-<button aria-controls="site-navigation" aria-expanded="false" aria-label="Open menu" class="menu-toggle" type="button"><span></span><span></span><span></span></button>
-<nav aria-label="Main navigation" class="nav" id="site-navigation">
-<a href="../index.html">Home</a><a href="../resume.html">Resume</a><a aria-current="page" class="is-active" href="../projects.html">Projects</a><a href="../lab.html">Lab</a><a href="../contact.html">Contact</a>
-</nav>
-<div aria-label="Site language" class="language-switch" role="group"><a aria-current="page" aria-label="English" class="is-current" href="drone-power-board.html" hreflang="en" lang="en">EN</a><a aria-label="Polski" href="../pl/projects/drone-power-board.html" hreflang="pl" lang="pl">PL</a></div></div>
-</header>
-<main id="main">
-<section class="detail-hero container"><a class="back-link" href="../projects.html"><span aria-hidden="true">←</span> Back to projects</a><p class="eyebrow">PROJECT 03 / POWER ELECTRONICS</p><div class="detail-heading"><h1>Drone Power Board</h1><p>A power distribution board with independent primary and backup supply paths for a drone.</p></div><div class="detail-hero-image"><img alt="KiCad three-dimensional rendering of drone power board with large yellow connectors" fetchpriority="high" src="../assets/images/drone-top.webp"/></div><div class="detail-tags"><span>4-LAYER PCB</span><span>REDUNDANT POWER</span><span>SOFT-START</span><span>STM32</span></div></section>
-<section class="section section-lined container detail-body"><div class="split-heading"><p class="eyebrow">01 / OVERVIEW</p><h2>Power with a backup plan</h2></div><div class="detail-text-grid"><p>This four-layer PCB was designed to manage a primary power path and an independent redundant backup supply. A controlled soft-start mechanism pre-charges the high-capacitance loads in the motor controllers to limit inrush current on startup.</p><div><h3>Key design elements</h3><ul class="keypoints"><li>Two independent power supply paths: primary and backup</li><li>Soft-start by pre-charging motor controller loads</li><li>Inrush current limitation during startup</li><li>STM32-family microcontroller for voltage monitoring and power management</li><li>Communication with the drone control system</li></ul></div></div></section>
-<section class="section container pcb-viewer-section" aria-labelledby="drone-viewer-heading">
-  <div class="section-intro compact">
-    <p class="eyebrow">02 / INTERACTIVE MODEL</p>
-    <div><h2 id="drone-viewer-heading">Explore the PCB in 3D</h2><p>Rotate, zoom and pan to inspect the PCB from every angle.</p></div>
-  </div>
-  <div class="pcb-viewer-frame" data-pcb-model>
-    <div class="pcb-model-stage">
-      <model-viewer id="drone-3d" class="pcb-model-viewer" src="../assets/models/pcb-drone.glb" alt="Interactive 3D model of the drone power distribution PCB" loading="eager" reveal="auto" camera-controls touch-action="pan-y" interaction-prompt="none" shadow-intensity="0.25" environment-image="neutral" camera-orbit="35deg 68deg auto"></model-viewer>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <button type="button" class="menu-toggle" aria-controls="site-navigation" aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button>
+      <nav class="nav" id="site-navigation" aria-label="Main navigation">
+        <a href="../index.html" >Home</a><a href="../resume.html" >Resume</a><a href="../projects.html" class="is-active" aria-current="page">Projects</a><a href="../lab.html" >Lab</a><a href="../contact.html" >Contact</a>
+      </nav>
     </div>
-    <div class="pcb-viewer-toolbar">
-      <span class="pcb-usage-hint">Drag to rotate · scroll to zoom · right-click to pan</span>
-      <div class="pcb-viewer-buttons">
-        <button type="button" class="pcb-viewer-action" data-reset-model>Reset view</button>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="section container detail-gallery"><div class="section-intro compact"><p class="eyebrow">03 / GALLERY</p><div><h2>Inside the design</h2><p>Selected 3D PCB views.</p></div></div><div class="gallery-grid"><figure class="gallery-image gallery-wide"><img alt="Drone power board upper surface 3D rendering" loading="lazy" src="../assets/images/drone-top.webp"/><figcaption>PCB render / component side</figcaption></figure><figure class="gallery-image"><img alt="Drone power board lower surface 3D rendering" loading="lazy" src="../assets/images/drone-bottom.webp"/><figcaption>PCB render / reverse side</figcaption></figure></div></section>
+  </header>
+  <main id="main">
+<section class="detail-hero container"><a class="back-link" href="../projects.html"><span aria-hidden="true">←</span> Back to projects</a><p class="eyebrow">PROJECT 03 / POWER ELECTRONICS</p><div class="detail-heading"><h1>Drone Power Board</h1><p>A power distribution board with independent primary and backup supply paths for a drone.</p></div><div class="detail-hero-image"><img src="../assets/images/drone-top.webp" alt="KiCad three-dimensional rendering of drone power board with large yellow connectors" fetchpriority="high"></div><div class="detail-tags"><span>4-LAYER PCB</span><span>REDUNDANT POWER</span><span>SOFT-START</span><span>STM32</span></div></section>
+<section class="section section-lined container detail-body"><div class="split-heading"><p class="eyebrow">01 / OVERVIEW</p><h2>Power with a backup plan.</h2></div><div class="detail-text-grid"><p>This four-layer PCB was designed to manage a primary power path and an independent redundant backup supply. A controlled soft-start mechanism pre-charges the high-capacitance loads in the motor controllers to limit inrush current on startup.</p><div><h3>Key design elements</h3><ul class="keypoints"><li>Two independent power supply paths: primary and backup</li><li>Soft-start by pre-charging motor controller loads</li><li>Inrush current limitation during startup</li><li>STM32-family microcontroller for voltage monitoring and power management</li><li>Communication with the drone control system</li></ul></div></div></section>
+<section class="section container detail-gallery"><div class="section-intro compact"><p class="eyebrow">02 / GALLERY</p><div><h2>Inside the design.</h2><p>Selected 3D PCB views.</p></div></div><div class="gallery-grid"><figure class="gallery-image gallery-wide"><img loading="lazy" src="../assets/images/drone-top.webp" alt="Drone power board upper surface 3D rendering"><figcaption>PCB render / component side</figcaption></figure><figure class="gallery-image "><img loading="lazy" src="../assets/images/drone-bottom.webp" alt="Drone power board lower surface 3D rendering"><figcaption>PCB render / reverse side</figcaption></figure></div></section>
 <section class="section container detail-next"><div><span class="eyebrow">NEXT PROJECT</span><a href="waveform-generator.html">Waveform Generator <span aria-hidden="true">↗</span></a></div><a class="text-link" href="../projects.html">All projects ↗</a></section>
 </main>
-<footer class="site-footer">
-<div class="container">
-<div class="footer-bottom"><span>© <span id="year">2026</span> Gabriel Maj</span><div class="footer-links"><a href="https://www.linkedin.com/in/gabriel-maj-181662235/" rel="noopener noreferrer" target="_blank">LinkedIn ↗</a></div></div>
-</div>
-</footer>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom"><span>© <span id="year">2026</span> Gabriel Maj</span><div class="footer-links"><a href="https://www.linkedin.com/in/gabriel-maj-181662235/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div></div>
+    </div>
+  </footer>
 </body></html>
