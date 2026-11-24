@@ -73,6 +73,14 @@ body.contact-page .form-honeypot{position:absolute!important;left:-99999px!impor
  body.contact-page .contact-form-bottom{align-items:stretch;flex-direction:column}
  body.contact-page .contact-submit{width:100%}
 }
+
+/* Contact form feedback; styles isolated from stale global CSS */
+.contact-form-feedback{display:block;margin:18px 0 0;padding:14px 18px;border-radius:8px;border:1px solid #cbd6d7;background:#eef3f2;color:#24383e;font-size:14px;line-height:1.5}
+.contact-form-feedback[hidden]{display:none}
+.contact-form-feedback[data-state="error"]{border-color:#dfaaaa;background:#fff1f1;color:#852e2e}
+.contact-form-feedback[data-state="warning"]{border-color:#dfc68f;background:#fff9e9;color:#775916}
+.contact-form-feedback[data-state="success"]{border-color:#a6c9ba;background:#eaf6f0;color:#215a40}
+.contact-submit:disabled{opacity:.65;cursor:not-allowed}
 </style>
 </head>
 <body class="contact-page">
@@ -117,11 +125,8 @@ body.contact-page .form-honeypot{position:absolute!important;left:-99999px!impor
 </div>
 <section class="contact-form-section" aria-labelledby="contact-form-heading">
   <div class="contact-form-intro"><h2 id="contact-form-heading">Send a message</h2><p>Or use the form below to get in touch.</p></div>
-  <form class="contact-form" action="https://formsubmit.co/kontakt@gmajtech.com" method="POST" accept-charset="UTF-8">
+  <form class="contact-form" action="https://formspree.io/f/mdegypkz" data-formspree-form method="POST" accept-charset="UTF-8">
     <input type="hidden" name="_subject" value="New message from gmajtech.com (EN)">
-    <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_captcha" value="true">
-    <input type="hidden" name="_next" value="https://gmajtech.com/thanks.html">
     <div class="form-honeypot" aria-hidden="true"><label>Leave empty <input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></div>
     <div class="contact-form-fields">
       <div class="contact-field"><label for="contact-name">Name</label><input id="contact-name" name="name" type="text" autocomplete="name" maxlength="120" required></div>
@@ -129,8 +134,9 @@ body.contact-page .form-honeypot{position:absolute!important;left:-99999px!impor
       <div class="contact-field contact-field-wide"><label for="contact-subject">Subject</label><input id="contact-subject" name="subject" type="text" maxlength="180" required></div>
       <div class="contact-field contact-field-wide"><label for="contact-message">Message</label><textarea id="contact-message" name="message" rows="6" maxlength="5000" required></textarea></div>
     </div>
-    <div class="contact-form-bottom"><button class="contact-submit" type="submit">Send message <span aria-hidden="true">↗</span></button><p class="contact-form-privacy">Your message will be forwarded to kontakt@gmajtech.com through FormSubmit. By submitting, you agree to share the information provided so that I can reply.</p></div>
-  </form>
+    <div class="contact-form-bottom"><button class="contact-submit" type="submit">Send message <span aria-hidden="true">↗</span></button><p class="contact-form-privacy">This form uses Formspree to deliver messages to kontakt@gmajtech.com. Your details will be used only to reply.</p></div>
+  <p class="contact-form-feedback" role="status" aria-live="polite" data-form-feedback hidden></p>
+</form>
 </section>
 </section>
 </main>
@@ -139,4 +145,5 @@ body.contact-page .form-honeypot{position:absolute!important;left:-99999px!impor
 <div class="footer-bottom"><span>© <span id="year">2026</span> Gabriel Maj</span><div class="footer-links"><a href="https://www.linkedin.com/in/gabriel-maj-181662235/" rel="noopener noreferrer" target="_blank">LinkedIn ↗</a></div></div>
 </div>
 </footer>
+<script defer src="assets/contact-form.js"></script>
 </body></html>

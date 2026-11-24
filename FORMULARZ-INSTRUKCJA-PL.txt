@@ -1,18 +1,13 @@
-FORMULARZ KONTAKTOWY — URUCHOMIENIE
+FORMULARZ KONTAKTOWY — GMAJTECH
 
-Formularz na stronach contact.html i pl/contact.html wysyła dane do FormSubmit (formsubmit.co).
-Nie wymaga serwera PHP ani własnego backendu; nadaje się do GitHub Pages.
+Formspree podłączony do obu wersji językowych:
+https://formspree.io/f/mdegypkz
 
-1. Wgraj wszystkie pliki z tego folderu do repozytorium publikowanego przez GitHub Pages.
-2. Upewnij się, że kontakt@gmajtech.com może odbierać wiadomości.
-3. Otwórz https://gmajtech.com/contact.html lub /pl/contact.html.
-4. Wyślij testową wiadomość z formularza.
-5. FormSubmit powinien wysłać wiadomość aktywacyjną na kontakt@gmajtech.com. Kliknij link potwierdzający.
-6. Wyślij DRUGĄ testową wiadomość i sprawdź, czy została dostarczona.
-7. Przetestuj także wersję polską.
+Wgraj całą zawartość folderu gabriel-maj-portfolio na GitHub Pages lub podmień:
+- contact.html
+- pl/contact.html
+- assets/contact-form.js (jeśli brakuje go na hostingu)
 
-Ważne: bez aktywacji adresu formularz nie będzie przesyłał zgłoszeń.
-Wiadomości przetwarza firma zewnętrzna (FormSubmit). Zweryfikuj, czy to odpowiada Twoim wymogom prywatności.
-Strony potwierdzenia: https://gmajtech.com/thanks.html oraz https://gmajtech.com/pl/thanks.html.
-Nie testuj przez file:// — użyj opublikowanej strony lub lokalnego serwera HTTP.
-W przypadku problemów z dostarczaniem: https://formsubmit.co/help.
+W Formspree upewnij się, że formularz jest aktywny i że ustawiono powiadomienia na kontakt@gmajtech.com.
+Po publikacji przetestuj wysłanie wiadomości na gmajtech.com/contact.html oraz gmajtech.com/pl/contact.html.
+Bez rzeczywistego testu nie można potwierdzić dostarczenia wiadomości.
