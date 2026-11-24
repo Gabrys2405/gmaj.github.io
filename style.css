@@ -251,3 +251,38 @@ h1,h2,h3,h4,h5,h6{font-family:inherit;font-style:normal}
 .pcb-viewer-buttons .pcb-viewer-action{min-width:120px}
 .pcb-viewer-frame.pcb-viewer-error::after{content:"3D preview could not be loaded in this browser.";display:block;padding:0 22px 18px;background:var(--bg);font-size:11px;color:#8b5454}
 html[lang="pl"] .pcb-viewer-frame.pcb-viewer-error::after{content:"Podgląd 3D nie mógł zostać wczytany w tej przeglądarce."}
+
+
+/* November 2026: original gmajtech branding */
+.site-header .header-inner{justify-content:space-between;gap:20px}
+.site-brand{flex:0 1 210px;display:flex;align-items:center;min-width:0}
+.site-brand-wide{width:210px;max-width:100%;height:auto;display:block}
+.site-brand-small{display:none}
+.site-header .nav{gap:clamp(17px,2.2vw,34px)}
+@media(min-width:761px) and (max-width:1040px){.site-brand{flex-basis:165px}.site-brand-wide{width:165px}.site-header .nav{gap:15px}.site-header .nav a{font-size:clamp(14px,1.7vw,18px)}}
+@media(max-width:760px){.site-header .header-inner{justify-content:space-between;gap:12px}.site-brand{order:0;flex:0 0 auto;width:48px}.site-brand-wide{display:none}.site-brand-small{display:block;width:44px;height:44px}.site-header .menu-toggle{order:1;flex:0 0 42px;margin:0}.site-header .nav{order:3}.site-header .language-switch{order:2;margin-left:auto}}
+/* Accessible minimal contact form */
+.contact-form-section{border-top:1px solid var(--line);margin-top:78px;padding-top:55px;max-width:950px}
+.contact-form-intro h2{font-size:clamp(30px,4vw,48px);font-weight:600;letter-spacing:-.05em;margin:0 0 10px}
+.contact-form-intro p{font-size:15px;color:var(--muted);margin:0 0 36px}
+.contact-form-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.contact-field{display:flex;flex-direction:column;gap:10px;min-width:0}
+.contact-field-wide{grid-column:1/-1}
+.contact-field label{font-weight:600;font-size:14px;color:var(--ink)}
+.contact-field input,.contact-field textarea{width:100%;border:1px solid #cdd5d4;border-radius:9px;background:#fff;padding:15px 17px;color:var(--ink);font:inherit;font-size:16px;transition:border-color .16s,box-shadow .16s}
+.contact-field textarea{resize:vertical;min-height:156px}
+.contact-field input:focus,.contact-field textarea:focus{outline:none;border-color:#3a829d;box-shadow:0 0 0 3px rgba(58,130,157,.16)}
+.contact-form-bottom{display:flex;align-items:center;gap:24px;margin-top:24px;flex-wrap:wrap}
+.contact-submit{background:var(--ink);border:1px solid var(--ink);color:#fff;padding:16px 22px;display:inline-flex;gap:28px;align-items:center;justify-content:space-between;font:inherit;font-weight:600;cursor:pointer;transition:background .2s,transform .2s}
+.contact-submit:hover{background:#344954;transform:translateY(-2px)}
+.contact-form-privacy{color:var(--muted);font-size:12px;line-height:1.7;max-width:570px;margin:0}
+.form-honeypot{position:absolute!important;left:-99999px!important;width:1px;height:1px;overflow:hidden}
+.thank-you-section{min-height:60vh;padding-block:125px 145px}
+.thank-you-section h1{font-size:clamp(38px,6vw,76px);font-weight:600;letter-spacing:-.055em;line-height:1.13;margin-bottom:20px}
+.thank-you-section p{color:var(--muted);font-size:17px;max-width:650px;margin-bottom:30px}
+@media(max-width:760px){.contact-form-section{margin-top:55px;padding-top:38px}.contact-form-fields{grid-template-columns:1fr;gap:18px}.contact-form-bottom{align-items:flex-start;flex-direction:column}.contact-submit{width:100%}.thank-you-section{padding-block:85px 110px;min-height:55vh}}
+
+/* Exact approved GMAJTECH logo and consistent Waveform title */
+.site-brand-small{object-fit:contain}
+.feature-project-copy h3 .title-dash{font-weight:500;white-space:nowrap}
+@media(max-width:760px){.site-brand-small{width:44px;height:46px}}

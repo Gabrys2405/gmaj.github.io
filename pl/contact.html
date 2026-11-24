@@ -11,7 +11,7 @@
 <meta content="Skontaktuj się z Gabrielem Majem w sprawach elektroniki, analizy obwodów i projektowania sprzętu." property="og:description"/>
 <meta content="../assets/images/generator-top.webp" property="og:image"/>
 <title>Kontakt | Gabriel Maj</title>
-<link href="../assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="../assets/gmajtech-mark-approved.png" rel="icon" type="image/png"/>
 <link href="../style.css" rel="stylesheet"/>
 <script defer="" src="../script.js"></script>
 <link href="../contact.html" hreflang="en" rel="alternate"/><link href="contact.html" hreflang="pl" rel="alternate"/></head>
@@ -19,6 +19,7 @@
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header" id="site-header">
 <div class="container header-inner">
+<a class="site-brand" href="../index.html" aria-label="gmajtech.com — home"><img class="site-brand-wide" src="../assets/gmajtech-logo.svg" alt="gmajtech.com" width="1250" height="262"><img class="site-brand-small" src="../assets/gmajtech-mark-approved.png" alt="" aria-hidden="true" width="227" height="243"></a>
 <button aria-controls="site-navigation" aria-expanded="false" aria-label="Otwórz menu" class="menu-toggle" type="button"><span></span><span></span><span></span></button>
 <nav aria-label="Nawigacja główna" class="nav" id="site-navigation">
 <a href="index.html">Start</a><a href="resume.html">CV</a><a href="projects.html">Projekty</a><a href="lab.html">Laboratorium</a><a aria-current="page" class="is-active" href="contact.html">Kontakt</a>
@@ -39,12 +40,12 @@
 <span class="contact-card-label">Telefon</span>
 <span class="contact-card-value">+48 791 792 734</span>
 </a>
-<a aria-label="Napisz na adres gabrielmaj8@gmail.com" class="contact-card" href="mailto:gabrielmaj8@gmail.com">
+<a aria-label="Napisz na adres kontakt@gmajtech.com" class="contact-card" href="mailto:kontakt@gmajtech.com">
 <span aria-hidden="true" class="contact-card-icon">
 <svg focusable="false" viewbox="0 0 24 24"><path d="M4 6.5h16a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1Z" fill="none" stroke="currentColor" stroke-width="1.8"></path><path d="m4 8 8 6 8-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg>
 </span>
 <span class="contact-card-label">E-mail</span>
-<span class="contact-card-value">gabrielmaj8@gmail.com</span>
+<span class="contact-card-value">kontakt@gmajtech.com</span>
 </a>
 <a aria-label="Otwórz profil Gabriela Maja na LinkedIn" class="contact-card" href="https://www.linkedin.com/in/gabriel-maj-181662235/" rel="noopener noreferrer" target="_blank">
 <span aria-hidden="true" class="contact-card-icon">
@@ -54,6 +55,23 @@
 <span class="contact-card-value">linkedin.com/in/gabriel-maj-181662235</span>
 </a>
 </div>
+<section class="contact-form-section" aria-labelledby="contact-form-heading">
+  <div class="contact-form-intro"><h2 id="contact-form-heading">Wyślij wiadomość</h2><p>Możesz też skorzystać z formularza poniżej.</p></div>
+  <form class="contact-form" action="https://formsubmit.co/kontakt@gmajtech.com" method="POST" accept-charset="UTF-8">
+    <input type="hidden" name="_subject" value="New message from gmajtech.com (PL)">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_captcha" value="true">
+    <input type="hidden" name="_next" value="https://gmajtech.com/pl/thanks.html">
+    <div class="form-honeypot" aria-hidden="true"><label>Leave empty <input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></div>
+    <div class="contact-form-fields">
+      <div class="contact-field"><label for="contact-name">Imię i nazwisko</label><input id="contact-name" name="name" type="text" autocomplete="name" maxlength="120" required></div>
+      <div class="contact-field"><label for="contact-email">Twój adres e-mail</label><input id="contact-email" name="email" type="email" autocomplete="email" maxlength="180" required></div>
+      <div class="contact-field contact-field-wide"><label for="contact-subject">Temat</label><input id="contact-subject" name="subject" type="text" maxlength="180" required></div>
+      <div class="contact-field contact-field-wide"><label for="contact-message">Wiadomość</label><textarea id="contact-message" name="message" rows="6" maxlength="5000" required></textarea></div>
+    </div>
+    <div class="contact-form-bottom"><button class="contact-submit" type="submit">Wyślij wiadomość <span aria-hidden="true">↗</span></button><p class="contact-form-privacy">Wiadomość zostanie przesłana przez usługę FormSubmit do kontakt@gmajtech.com. Wysyłając formularz, zgadzasz się na przekazanie podanych danych w celu udzielenia odpowiedzi.</p></div>
+  </form>
+</section>
 </section>
 </main>
 <footer class="site-footer">
