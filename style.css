@@ -286,3 +286,53 @@ html[lang="pl"] .pcb-viewer-frame.pcb-viewer-error::after{content:"Podgląd 3D n
 .site-brand-small{object-fit:contain}
 .feature-project-copy h3 .title-dash{font-weight:500;white-space:nowrap}
 @media(max-width:760px){.site-brand-small{width:44px;height:46px}}
+
+
+/* 2026-11-24 layout hotfix: enforce a single, compact header and responsive form */
+.site-header .header-inner{
+  display:flex; flex-wrap:nowrap; align-items:center; justify-content:space-between;
+  gap:clamp(16px,2vw,26px); min-height:88px;
+}
+.site-header .site-brand{
+  display:flex; align-items:center; justify-content:flex-start; flex:0 0 215px;
+  width:215px; max-width:215px; min-width:0; overflow:hidden;
+}
+.site-header .site-brand-wide{display:block; width:100%; max-width:215px; height:auto; max-height:64px; object-fit:contain; object-position:left center}
+.site-header .site-brand-small{display:none}
+.site-header .nav{flex:0 1 auto; align-items:center; gap:clamp(16px,1.6vw,27px); margin-left:auto}
+.site-header .nav a{white-space:nowrap; padding-block:26px; font-size:clamp(15px,1.2vw,18px)}
+.site-header .language-switch{flex:0 0 auto; margin-left:0}
+.contact-cards-section{padding-top:65px}
+.contact-form-section{width:100%;max-width:100%;margin-top:74px;padding-top:55px;}
+.contact-form{max-width:900px}
+.contact-form-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.contact-field{display:flex;flex-direction:column;gap:9px;min-width:0}
+.contact-field-wide{grid-column:1/-1}
+.contact-field input,.contact-field textarea{display:block;box-sizing:border-box;width:100%;min-width:0;background:#fff;border:1px solid #cdd5d4;border-radius:9px;padding:15px 17px;color:var(--ink);font-family:inherit;font-size:16px}
+.contact-field textarea{min-height:168px;resize:vertical}
+.contact-submit{display:inline-flex;align-items:center;justify-content:space-between;min-height:50px;padding:13px 22px;background:var(--ink);color:#fff;border:1px solid var(--ink);cursor:pointer}
+.form-honeypot{position:absolute!important;left:-9999px!important;top:auto!important;width:1px!important;height:1px!important;overflow:hidden!important}
+@media (min-width:761px) and (max-width:1099px){
+  .site-header .site-brand{flex-basis:170px; width:170px;max-width:170px}
+  .site-header .site-brand-wide{max-width:170px}
+  .site-header .nav{gap:14px}
+  .site-header .nav a{font-size:15px}
+  .site-header .header-inner{gap:13px}
+}
+@media (max-width:760px){
+  .site-header .header-inner{min-height:70px; gap:12px}
+  .site-header .site-brand{flex:0 0 46px;width:46px;max-width:46px;order:0;overflow:visible}
+  .site-header .site-brand-wide{display:none}
+  .site-header .site-brand-small{display:block;width:44px;height:44px;object-fit:contain}
+  .site-header .menu-toggle{order:1;flex:0 0 42px}
+  .site-header .language-switch{order:2;margin-left:auto}
+  .site-header .nav{order:3;position:absolute;flex-direction:column;margin-left:0;gap:0}
+  .site-header .nav:not(.is-open){display:none}
+  .site-header .nav.is-open{display:flex}
+  .site-header .nav a{font-size:19px;padding:14px 3px}
+  .contact-form-section{margin-top:55px;padding-top:38px}
+  .contact-form-fields{grid-template-columns:1fr;gap:18px}
+  .contact-field-wide{grid-column:auto}
+  .contact-form-bottom{flex-direction:column;align-items:stretch}
+  .contact-submit{width:100%}
+}
